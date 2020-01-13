@@ -1,0 +1,6 @@
+
+BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+18:4A:6F:B5:B8:A0, 2019-10-06 19:10:29, 2019-10-06 19:12:45,  2,  54, WPA2, CCMP TKIP,PSK, -39,      386,        0,   0.  0.  0.  0,   5, Lubov, 
+
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+
