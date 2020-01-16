@@ -9,7 +9,7 @@ api_bp = Blueprint('api', __name__)
 api = Api(api_bp)
 
 api.add_resource(ItemResource, '/item')
-api.add_resource(TasksResource, '/task')
+api.add_resource(TasksResource, '/task') 
 api.add_resource(TaskResource, '/task/<id>')
 
 api.add_resource(AttachmentResource, '/attachment')

@@ -39,6 +39,11 @@ class TagsResource(Resource):
 		tag_id = tag_info['id']
 		task_id = json_data['task_id']
 
+		task = Task.query.filter_by(id=task_id).first()
+
+		if not task:
+			return {'message':'No task found!'}, 400
+
 		new_taskTag = TaskTag(tag_id=tag_id, task_id=task_id)
 		db.session.add(new_taskTag)
 		db.session.commit()
