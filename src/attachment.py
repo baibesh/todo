@@ -28,12 +28,13 @@ class AttachmentResource(Resource):
 			if not task:
 				return { 'message':'No task found!' }, 400
 
+			if not file.save(url):
+				return { 'message':'Error when saving a file' }, 400
+
 			new_attachment = Attachment(url=url, task_id=task_id)
 
 			db.session.add(new_attachment)
 			db.session.commit()
-
-			file.save(url)
 
 			return { 'status':'success' }
 
